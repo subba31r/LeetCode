@@ -19,16 +19,16 @@ class Solution:
         #Time complexity is O(n) as accessing keys from dic takes only O(1)
         #and for loop takes O(n). So, overall is O(n)
         #Space complexity is O(n) as we are storing every element in dic
-        dic = {}
-        for i in range(0,len(nums)):
-            if nums[i] not in dic.keys():
-                dic[nums[i]] = nums[i]
-            else:
-                return True
-        return False
+        # dic = {}
+        # for i in range(0,len(nums)):
+        #     if nums[i] not in dic.keys():
+        #         dic[nums[i]] = nums[i]
+        #     else:
+        #         return True
+        # return False
 
         #by using set instead of dictionary
         #O(n) time and space complexity
-        # if len(nums) == len(set(nums)):
-        #     return False
-        # return True
+        if len(nums) == len(set(nums)):
+            return False
+        return True
