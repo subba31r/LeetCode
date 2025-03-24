@@ -5,10 +5,4 @@ class Solution:
             if n%2 == 0:
                 even += 1
         
-        for i in range(0,len(nums)):
-            if even > 0:
-                nums[i] = 0
-                even -= 1
-            else:
-                nums[i] = 1
-        return nums
+        return [0]*even + [1]*(len(nums)-even)
