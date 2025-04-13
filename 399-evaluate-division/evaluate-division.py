@@ -37,10 +37,6 @@ class Solution:
         for q1, q2 in queries:
             if q1 not in hm or q2 not in hm:
                 res.append(-1)
-            elif q1 == q2:
-                res.append(1)
-            elif adj[hm[q1]][hm[q2]] != 0:
-                res.append(adj[hm[q1]][hm[q2]])
             else:
                 visited = set()
                 cur = [-1]
