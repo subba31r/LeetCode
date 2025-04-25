@@ -5,10 +5,8 @@ class Solution:
         for i in range(1,n):
             forward[i] = forward[i-1]*nums[i-1]
 
-        backward = [1]*n
-        for i in range(n-2,-1,-1):
-            backward[i] = backward[i+1]*nums[i+1]
-        
-        for i in range(0,n):
-            forward[i] = forward[i]*backward[i]
+        backward = 1
+        for i in range(n-1,-1,-1):
+            forward[i] *= backward
+            backward *= nums[i]
         return forward
