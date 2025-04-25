@@ -8,9 +8,7 @@ class Solution:
             else:
                 if len(stack) == 0:
                     return False
-                par = dic[ch]
-                if stack[-1] == par:
-                    stack.pop()
-                else:
+                par = stack.pop()
+                if par != dic[ch]:
                     return False
         return True if len(stack) == 0 else False
