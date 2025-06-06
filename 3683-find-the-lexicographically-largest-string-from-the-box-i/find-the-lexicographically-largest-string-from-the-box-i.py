@@ -7,11 +7,8 @@ class Solution:
         n = len(word)
         res = ""
         val = n-numFriends+1
-        for i in range(0,n-val+1):
-            res = max(res,word[i:i+val])
-
-        for i in range(n-val+1,n):
-            res = max(res,word[i:])
+        for i in range(0,n):
+            res = max(res,word[i:min(i+val,n)])
         return res
 
 
